@@ -41,6 +41,7 @@ class HelloApiView(APIView):
 
     def put(self, request, pk=None):
         """Handle updating an object"""
+        name = serializer.validated_data.get('name')
         return Response({'method': 'PUT'})
 
 
